@@ -5,6 +5,7 @@ First install like any other project
 
 - Create new GithubApp [https://github.com/settings/apps/new]
 - Set field "Homepage URL" to cotain value http://localhost:3000
+- diable checkbox "use web hooks"
 - Create app and get Github CLIENT ID and CLIENT SECRET keys
 - Add those keys to .env file
 
