@@ -1,7 +1,12 @@
 ## Runing Project
 
 First install like any other project
-` npm i`
+``` npm i```
+
+- Create new GithubApp [https://github.com/settings/apps/new]
+- Set field "Homepage URL" to cotain value http://localhost:3000
+- Create app and get Github CLIENT ID and CLIENT SECRET keys
+- Add those keys to .env file
 
 After, run the development server:
 
@@ -16,7 +21,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Deal with caching and ISR.
 - Add meta tags and etc
 - Clean up code a little bit
-- Use wrappers for all 3-d party components like i did with src/app/\_\_shadcn/components/ui/custom/link.tsx
+- Use wrappers for all 3-d party components like i did with src/app/__shadcn/components/ui/custom/link.tsx
 
 ## Key decisions or assumptions made during development
 
