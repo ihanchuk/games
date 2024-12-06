@@ -1,24 +1,10 @@
 import Image from "next/image";
 
 import { TCreatorsResponse } from "../__types";
-// import { doApiRequest } from "../__actions";
+import { doApiRequest } from "../__actions";
 
 import { Heading, P } from "ui/custom";
 import { CreatorGames } from "ui/creators";
-
-async function doApiRequest<ResponseType>(
-  slug: string,
-  params: object = {},
-  apiRoot = process.env.GAME_API_ROOT!,
-  key = process.env.GAME_API_KEY!,
-): Promise<ResponseType> {
-  const urlParams = new URLSearchParams({ ...{ key }, ...params }).toString();
-  const requestUrl = `${apiRoot}/${slug}?${urlParams}`;
-
-  return await fetch(requestUrl, { next: { revalidate: 4600 } })
-    .then((data: Response): Promise<ResponseType> => data.json())
-    .catch((err) => err.message);
-}
 
 export default async function Leaders() {
   const creators = await doApiRequest<TCreatorsResponse>("creators", {
